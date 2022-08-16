@@ -1,0 +1,96 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backdrop .modal {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px 40px;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  background-color: white;
+  color: black;
+}
+
+.backdrop .modal::-webkit-scrollbar {
+  display: none;
+}
+
+.backdrop .modal h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.backdrop .modal hr {
+  margin-bottom: 30px;
+}
+
+.backdrop .modal button {
+  background-color: #1382e3;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.backdrop .modal button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.backdrop .modal .rejectDraw {
+  background-color: #ff4400;
+}
+
+.backdrop .modal .acceptDraw {
+  background-color: #1de01d;
+}
+
+.modalSelectFigure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalSelectFigure > div {
+  cursor: pointer;
+}
+
+.modalList ul {
+  padding: 20px;
+}
+
+.modalList li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=Modal.css.map */

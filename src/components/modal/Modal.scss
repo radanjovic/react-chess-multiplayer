@@ -1,0 +1,88 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal {
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        padding: 20px 40px;
+
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 90vh;
+
+        background-color: white;
+        color: black;
+
+        h1 {
+            margin: 0;
+            text-align: center;
+        }
+
+        hr {
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: rgb(19, 130, 227);
+            color: white;
+            border: none;
+            outline: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 16px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
+
+        .rejectDraw {
+            background-color: rgb(255, 68, 0);
+        }
+
+        .acceptDraw {
+            background-color: rgb(29, 224, 29);
+        }
+    }
+}
+
+.modalSelectFigure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &>div {
+        cursor: pointer;
+    }
+}
+
+.modalList {
+    ul {
+        padding: 20px;
+    }
+    li {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 5px;
+
+        font-size: 18px;
+        font-weight: 400;
+    }
+}

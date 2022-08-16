@@ -1,0 +1,852 @@
+.appContainer {
+  padding: 20px 5px;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
+  background-color: white;
+}
+
+.appContainer .settingsModalWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.appContainer .modalTimerType > div {
+  margin-bottom: 5px;
+}
+
+.appContainer .modalTimerType .modalTimerTypeButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.appContainer .modalTimerType .modalTimerTypeButtonContainer button {
+  font-size: 12px;
+}
+
+.appContainer .modalTableColor > div {
+  margin-bottom: 5px;
+}
+
+.appContainer .modalTableColor .modalTableColorButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.appContainer .modalTableColor .modalTableColorButtonContainer button {
+  width: 50px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.appContainer .modalTableColor .modalTableColorButtonContainer button span {
+  width: 50% !important;
+  height: 100% !important;
+  border: 1px solid black;
+}
+
+.appContainer .modalWhitePlayerRemovedFigures img,
+.appContainer .modalBlackPlayerRemovedFigures img {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.appContainer .modalMovesHistory {
+  margin-bottom: 10px;
+}
+
+.appContainer .modalMovesHistory ul {
+  padding: 20px;
+  margin: 0;
+}
+
+.appContainer .modalMovesHistory li {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.appContainer .settingsContainer {
+  text-align: center;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .appContainer .settingsContainer {
+    display: none;
+    visibility: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .appContainer .settingsContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.appContainer .settingsContainer .miniTimerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  font-size: 12px;
+  color: #009dff;
+}
+
+.appContainer .settingsContainer .miniTimerDiv span {
+  font-size: 14px;
+}
+
+.appContainer .settingsContainer .iconsDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.appContainer .settingsContainer .iconsDiv div {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appContainer .settingsContainer .iconsDiv div button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.appContainer .settingsContainer .iconsDiv div button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.appContainer .settingsContainer .iconsDiv #settings {
+  background-color: #009dff !important;
+}
+
+.appContainer .settingsContainer .iconsDiv #surrender button {
+  background-color: #ff4400;
+}
+
+.appContainer .settingsContainer .iconsDiv #surrender button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.appContainer .settingsContainer .iconsDiv #offerDraw button {
+  background-color: #1de01d;
+}
+
+.appContainer .settingsContainer .iconsDiv #offerDraw button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.appContainer .settingsContainer .iconsDiv img {
+  width: 45px !important;
+  height: 45px !important;
+}
+
+.appContainer .surrenderButton {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+
+.appContainer .surrenderButton button {
+  background-color: #ff4400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .surrenderButton button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .surrenderButton button {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+}
+
+.appContainer .surrenderButton button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.appContainer .surrenderButton button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.appContainer .offerDraw {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+.appContainer .offerDraw button {
+  background-color: #1de01d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .offerDraw button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .offerDraw button {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+}
+
+.appContainer .offerDraw button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.appContainer .offerDraw button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.appContainer .timerType {
+  position: absolute;
+  top: 170px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .timerType {
+    top: 140px;
+  }
+}
+
+.appContainer .timerType button {
+  background-color: #009dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .timerType button {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .timerType button {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+}
+
+.appContainer .timerType button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.appContainer .timerType button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.appContainer .timer {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  border: 1px solid #009dff;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .timer {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+  .appContainer .timer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .timer {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+  .appContainer .timer p {
+    font-size: 20px;
+  }
+}
+
+.appContainer .timer > div {
+  margin: 10px 0;
+}
+
+.appContainer .timer h5 {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  color: #009dff;
+}
+
+.appContainer .timer p {
+  margin: 0px;
+  color: #009dff;
+  text-align: center;
+}
+
+.appContainer .movesHistory {
+  position: absolute;
+  top: 105px;
+  left: 8px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .movesHistory {
+    top: 90px;
+  }
+}
+
+.appContainer .movesHistory button {
+  background-color: #009dff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .movesHistory button {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .movesHistory button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+.appContainer .movesHistory button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.appContainer .movesHistory button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.appContainer .numberOfMoves {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  border: 1px solid #009dff;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .numberOfMoves {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .numberOfMoves {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
+
+.appContainer .numberOfMoves h5 {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  color: #009dff;
+}
+
+.appContainer .numberOfMoves p {
+  margin: 0px;
+  color: #009dff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.appContainer .tableColor {
+  position: absolute;
+  top: 145px;
+  left: 10px;
+  width: 75px;
+  height: 30px;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .tableColor {
+    width: 60px;
+    height: 25px;
+    top: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .tableColor {
+    width: 75px;
+    height: 30px;
+  }
+}
+
+.appContainer .tableColor button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  outline: none;
+  margin: 10px;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.appContainer .tableColor button span {
+  width: 50% !important;
+  height: 100% !important;
+  border: 1px solid black;
+}
+
+.appContainer .whitePlayerRemovedFigures {
+  position: absolute;
+  top: 350px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .whitePlayerRemovedFigures {
+    width: 100px;
+    top: 310px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .whitePlayerRemovedFigures {
+    width: 140px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1049px) {
+  .appContainer .whitePlayerRemovedFigures img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1199px) {
+  .appContainer .whitePlayerRemovedFigures img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1349px) {
+  .appContainer .whitePlayerRemovedFigures img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .appContainer .whitePlayerRemovedFigures img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+.appContainer .blackPlayerRemovedFigures {
+  position: absolute;
+  top: 320px;
+  right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .appContainer .blackPlayerRemovedFigures {
+    width: 100px;
+    top: 260px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .appContainer .blackPlayerRemovedFigures {
+    width: 140px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1049px) {
+  .appContainer .blackPlayerRemovedFigures img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1199px) {
+  .appContainer .blackPlayerRemovedFigures img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1349px) {
+  .appContainer .blackPlayerRemovedFigures img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .appContainer .blackPlayerRemovedFigures img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+.tableContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: auto;
+}
+
+@media screen and (max-width: 899px) {
+  .tableContainer {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1049px) {
+  .tableContainer {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1199px) {
+  .tableContainer {
+    width: 850px;
+    height: 850px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1349px) {
+  .tableContainer {
+    width: 950px;
+    height: 950px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .tableContainer {
+    width: 1100px;
+    height: 1100px;
+  }
+}
+
+.tableContainer .can-select:hover {
+  cursor: pointer;
+}
+
+.tableContainer .cannot-select:hover {
+  cursor: not-allowed;
+}
+
+.tableContainer > div {
+  border: 1px solid black;
+  position: relative;
+}
+
+.tableContainer > div .tableFieldIdentifier {
+  position: absolute;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 899px) {
+  .tableContainer > div .tableFieldIdentifier {
+    padding-left: 3px;
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1199px) {
+  .tableContainer > div .tableFieldIdentifier {
+    padding-left: 5px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tableContainer > div .tableFieldIdentifier {
+    padding-left: 10px;
+    font-size: 15px;
+  }
+}
+
+.tableContainer > div .tableIconContainer {
+  position: relative;
+}
+
+@media screen and (max-width: 500px) {
+  .tableContainer > div .tableIconContainer {
+    top: 15%;
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .tableContainer > div .tableIconContainer {
+    top: 15%;
+    left: 15%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .tableContainer > div .tableIconContainer {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+  .tableContainer > div .tableIconContainer {
+    top: 20%;
+    left: 20%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1050px) {
+  .tableContainer > div .tableIconContainer {
+    top: 20px;
+    left: 19px;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
+  .tableContainer > div .tableIconContainer {
+    top: 22px;
+    left: 22px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1350px) {
+  .tableContainer > div .tableIconContainer {
+    top: 24px;
+    left: 23px;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .tableContainer > div .tableIconContainer {
+    top: 22px;
+    left: 27px;
+  }
+}
+
+.tableContainer .white {
+  background-color: white;
+  color: black;
+}
+
+.tableContainer .black {
+  background-color: black;
+  color: white;
+}
+
+.not-visible {
+  display: none;
+  visibility: hidden;
+}
+
+.selected-field {
+  position: absolute;
+  top: 0.001px;
+  left: 0.001px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.not-available-field {
+  position: absolute;
+  top: 0.001px;
+  left: 0.001px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.available-field {
+  position: absolute;
+  top: 0.001px;
+  left: 0.001px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: rgba(0, 255, 0, 0.5);
+}
+/*# sourceMappingURL=App.css.map */
