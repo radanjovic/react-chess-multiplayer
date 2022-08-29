@@ -1,8 +1,8 @@
-# React Chess Single-player
+# React Chess Multi-player
 
-Simple chess app made with pure react for UI and JavaScript for logic, without external dependencies. Single player means that one player plays for both white and black player. Multiplayer with sockets is in the making.
+Simple chess app made with pure react for UI and JavaScript for logic, without external dependencies, on the frontend, and with express and socket.io for backend, with real-time capabilities.
 
-App is pretty self-explanatory, player can change the way the board looks, which timers to use (3+2, 5+3 or pure 10 minutes), the app keeps track of the moves, time each player takes, etc. Players can also 'surrender' and 'offer draw'. The app has also the ability to check for check, and limited ability to check for stalemate. Automatic checking for check-mate is also in the works. 
+App is pretty self-explanatory, players can change the way the board looks, which timers to use (3+2, 5+3 or pure 10 minutes), the app keeps track of the moves, time each player takes, etc. Players can also 'surrender' and 'offer draw'. The app has also the ability to check for check, and limited ability to check for stalemate. Automatic checking for check-mate is also in the works. 
 
 App might have some bugs, detailed testing is yet to be done!
 

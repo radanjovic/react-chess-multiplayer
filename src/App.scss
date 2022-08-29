@@ -1,4 +1,108 @@
+.appContainerWithImage {
+    min-height: 100vh;
+    min-width: 100vw;
+    height: auto;
+    width: auto;
+    // padding: 10% 0;
 
+    background-image: url('./assets/bg.jpg');
+    background-color: rgb(24, 40, 216);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .waitingForOtherPlayer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+
+        border-radius: 10px;
+        border: 1px solid white;
+        padding: 10px;
+        background-color: rgba(2, 0, 56, 0.339);
+    }
+
+    .appFormContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10vh;
+    }
+
+    .createRoomForm, .joinRoomForm {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 40vw;
+        min-width: 350px;
+        max-width: 1200px;
+        // border: 1px solid white;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgba(2, 0, 56, 0.339);
+
+        h2 {
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            background-color: rgba(1, 13, 43, 0.844);
+            border: 1px solid rgb(4, 58, 130);
+            border-radius: 10px;
+
+            color: white;
+
+            font-size: 16px;
+
+            &::placeholder {
+                color: rgb(206, 203, 203);
+                opacity: 1;
+            }
+            &:-ms-input-placeholder{ 
+                color: rgb(206, 203, 203);
+            }
+            &::-ms-input-placeholder {
+                color: rgb(206, 203, 203);
+            }
+        }
+
+        button {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            background-color: rgba(16, 34, 234, 0.803);
+            border-radius: 5px;
+            padding: 8px 30px;
+            color: white;
+
+            &:hover {
+                opacity: 0.75;
+                cursor: pointer;
+            }
+
+            &:disabled {
+                cursor: not-allowed;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .createRoomForm {
+        margin-bottom: 20px;
+    }
+}
 
 .appContainer {
     padding: 20px 5px;

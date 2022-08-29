@@ -1,6 +1,6 @@
 export const getFigures = (player) => {
     let arr = [];
-    arr.push({player, figure: 'pawn'});
+    // arr.push({player, figure: 'pawn'});
     arr.push({player, figure: 'rook'});
     arr.push({player, figure: 'knight'});
     arr.push({player, figure: 'bishop'});
@@ -113,22 +113,36 @@ export const getTable = () => {
     return table;
 }
 
-export  const getStylesForFieldsWhenNotSelected = (selectedFigure, turn, field) => {
+export  const getStylesForFieldsWhenNotSelected = (selectedFigure, turn, field, player) => {
     if (selectedFigure || !field.figure) {
       return '';
     }
     if (field.figure.player === 'white') {
+        if (player === 'black') {
+            return 'cannot-select';
+        }
       if (turn === 'white') {
         return 'can-select';
       } else {
         return 'cannot-select';
       }
     } else if (field.figure.player === 'black') {
+        if (player === 'white') {
+            return 'cannot-select';
+        }
       if (turn === 'black') {
         return 'can-select';
       } else {
         return 'cannot-select';
       }
+    }
+}
+
+export  const getStylesForFieldsWhenNotSelected_endTable = (field) => {
+    if (!field.figure) {
+        return '';
+    } else {
+        return 'cannot-select';
     }
 }
 

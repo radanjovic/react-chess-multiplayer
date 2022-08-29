@@ -1,3 +1,151 @@
+.appContainerWithImage {
+  min-height: 100vh;
+  min-width: 100vw;
+  height: auto;
+  width: auto;
+  background-image: url("./assets/bg.jpg");
+  background-color: #1828d8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.appContainerWithImage .waitingForOtherPlayer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: rgba(2, 0, 56, 0.339);
+}
+
+.appContainerWithImage .appFormContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10vh;
+}
+
+.appContainerWithImage .createRoomForm, .appContainerWithImage .joinRoomForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40vw;
+  min-width: 350px;
+  max-width: 1200px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(2, 0, 56, 0.339);
+}
+
+.appContainerWithImage .createRoomForm h2, .appContainerWithImage .joinRoomForm h2 {
+  color: white;
+}
+
+.appContainerWithImage .createRoomForm input, .appContainerWithImage .joinRoomForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(1, 13, 43, 0.844);
+  border: 1px solid #043a82;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+.appContainerWithImage .createRoomForm input::-webkit-input-placeholder, .appContainerWithImage .joinRoomForm input::-webkit-input-placeholder {
+  color: #cecbcb;
+  opacity: 1;
+}
+
+.appContainerWithImage .createRoomForm input:-ms-input-placeholder, .appContainerWithImage .joinRoomForm input:-ms-input-placeholder {
+  color: #cecbcb;
+  opacity: 1;
+}
+
+.appContainerWithImage .createRoomForm input::-ms-input-placeholder, .appContainerWithImage .joinRoomForm input::-ms-input-placeholder {
+  color: #cecbcb;
+  opacity: 1;
+}
+
+.appContainerWithImage .createRoomForm input::placeholder, .appContainerWithImage .joinRoomForm input::placeholder {
+  color: #cecbcb;
+  opacity: 1;
+}
+
+.appContainerWithImage .createRoomForm input:-ms-input-placeholder, .appContainerWithImage .joinRoomForm input:-ms-input-placeholder {
+  color: #cecbcb;
+}
+
+.appContainerWithImage .createRoomForm input::-ms-input-placeholder, .appContainerWithImage .joinRoomForm input::-ms-input-placeholder {
+  color: #cecbcb;
+}
+
+.appContainerWithImage .createRoomForm button, .appContainerWithImage .joinRoomForm button {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: rgba(16, 34, 234, 0.803);
+  border-radius: 5px;
+  padding: 8px 30px;
+  color: white;
+}
+
+.appContainerWithImage .createRoomForm button:hover, .appContainerWithImage .joinRoomForm button:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.appContainerWithImage .createRoomForm button:disabled, .appContainerWithImage .joinRoomForm button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.appContainerWithImage .createRoomForm {
+  margin-bottom: 20px;
+}
+
 .appContainer {
   padding: 20px 5px;
   max-width: 1400px;
