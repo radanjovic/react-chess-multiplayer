@@ -109,7 +109,7 @@
     max-width: 1400px;
     margin: auto;
     position: relative;
-    background-color: white;
+    background-color: rgba(23, 21, 21, 0.51);
 
     .settingsModalWrapper {
         display: flex;
@@ -675,6 +675,8 @@
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    padding: 3px;
+    border: 1px solid white;
 
     @media screen and (max-width: 899px) {
         width: 100vw;
@@ -743,39 +745,39 @@
             position: relative;
 
             @media screen and (max-width: 500px) {
-                top: 15%;
-                left: 15%;
+                top: 5%;
+                left: 5%;
             }
             @media screen and (min-width: 500px) and (max-width: 600px) {
+                top: 5%;
+                left: 5%;
+            }
+            @media screen and (min-width: 600px) and (max-width: 700px) {
+                top: 10%;
+                left: 10%;
+            }
+            @media screen and (min-width: 700px) and (max-width: 900px) {
                 top: 15%;
                 left: 15%;
             }
-            @media screen and (min-width: 600px) and (max-width: 700px) {
-                top: 20%;
-                left: 20%;
-            }
-            @media screen and (min-width: 700px) and (max-width: 900px) {
-                top: 20%;
-                left: 20%;
-            }
             @media screen and (min-width: 900px) and (max-width: 1050px) {
-                top: 20px;
-                left: 19px;
+                top: 8px;
+                left: 7px;
             }
 
             @media screen and (min-width: 1050px) and (max-width: 1200px) {
-                top: 22px;
-                left: 22px;
+                top: 12px;
+                left: 12px;
             }
 
             @media screen and (min-width: 1200px) and (max-width: 1350px) {
-                top: 24px;
-                left: 23px;
+                top: 12px;
+                left: 13px;
             }
         
             @media screen and (min-width:1350px) {
-                top: 22px;
-                left: 27px;
+                top: 15px;
+                left: 18px;
             }
             
         }
@@ -791,6 +793,55 @@
     .black {
         background-color: black;
         color: white;
+    }
+}
+
+.reversed {
+    transform: rotate(180deg);
+    .tableFieldIdentifier {
+        transform: rotate(180deg);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .tableIconContainer {
+
+        @media screen and (max-width: 500px) {
+            top: 5%;
+            left: -5% !important;
+        }
+        @media screen and (min-width: 500px) and (max-width: 600px) {
+            top: 5%;
+            left: -5% !important;
+        }
+        @media screen and (min-width: 600px) and (max-width: 700px) {
+            top: 10%;
+            left: -10% !important;
+        }
+        @media screen and (min-width: 700px) and (max-width: 900px) {
+            top: 15%;
+            left: -15% !important;
+        }
+        @media screen and (min-width: 900px) and (max-width: 1050px) {
+            top: 6px !important;
+            left: -8px !important;
+        }
+
+        @media screen and (min-width: 1050px) and (max-width: 1200px) {
+            top: 12px;
+            left: -10px !important;
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1350px) {
+            top: 12px;
+            left: -11px !important;
+        }
+    
+        @media screen and (min-width:1350px) {
+            top: 10px;
+            left: -15px !important;
+        }
+        
     }
 }
 

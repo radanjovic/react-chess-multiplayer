@@ -192,9 +192,10 @@ function App() {
       }
     });
 
-    socket.on('drawOffered', ({player}) => {
+    socket.on('drawOffered', ({player, move}) => {
       resetIntervals();
       setOfferedDraw(player);
+      setMovesHistory(prev => [...prev, move]);
     });
 
     socket.on('acceptDraw', ({draw}) => {
@@ -203,7 +204,7 @@ function App() {
       setDraw(true);
     });
 
-    socket.on('rejectDraw', ({player}) => {
+    socket.on('rejectDraw', ({player, move}) => {
       resetIntervals();
       if (player === 'white') {
         // setWhitePlayerTimer(setInterval(() => {setWhitePlayerTime(prev => prev - 1)}, 1000));
@@ -215,6 +216,7 @@ function App() {
       setDrawRejected({player});
       setDraw(false);
       setOfferedDraw(null);
+      setMovesHistory(prev => [...prev, move]);
     });
 
     socket.on('figureSaved', (data) => {
@@ -439,8 +441,10 @@ function App() {
           }
         }
         if (move) {
-          obj.move = move;
-          setMovesHistory(prev => [...prev, move])
+          // obj.move = move;
+          let MOVE = move.replace('Black player', blackPlayer).replace('black player', blackPlayer).replace('White player', whitePlayer).replace('white player', whitePlayer);
+          obj.move = MOVE
+          setMovesHistory(prev => [...prev, MOVE]);
         }
         setSelectedFigure(null);
         setAvailableMoves(null);
@@ -590,12 +594,19 @@ function App() {
 
   const handleDraw = () => {
     let PLAYER = player;
-    if (player !== turn) {
+    if (player !== turn || PLAYER !== turn) {
       return;
     }
     resetIntervals();
     setOfferedDraw(PLAYER);
-    socket.emit('drawOffered', {player: PLAYER});
+    let move;
+    if (PLAYER === 'white') {
+      move = `${whitePlayer} offered a draw.`;
+    } else if (PLAYER === 'black') {
+      move = `${blackPlayer} offered a draw.`;
+    }
+    setMovesHistory(prev => [...prev, move]);
+    socket.emit('drawOffered', {player: PLAYER, move});
   }
 
   const handleRejectDraw = () => {
@@ -609,8 +620,15 @@ function App() {
     }
     setDrawRejected({player: offeredDraw});
     setDraw(false);
+    let move;
+    if (offeredDraw === 'white') {
+      move = `${blackPlayer} rejected draw offer!`;
+    } else if (offeredDraw === 'black') {
+      move = `${whitePlayer} rejected draw offer!`
+    }
+    setMovesHistory(prev => [...prev, move]);
     setOfferedDraw(null);
-    socket.emit('rejectDraw', {player: offeredDraw});
+    socket.emit('rejectDraw', {player: offeredDraw, move});
   }
 
   const handleAcceptDraw = () => {
@@ -758,7 +776,7 @@ function App() {
           </div>}
         </div>
         <div className='modalMovesHistory'>
-          <div>Moves History: </div>
+          <div>Game History: </div>
           {movesHistory.length === 0 
           ? <p style={{textAlign: 'center', fontSize: 12}}>No moves yet!</p>
           :<ul>
@@ -839,7 +857,7 @@ function App() {
           </button>
         </div>}
         {(w && w >= 900) && <div className='movesHistory'>
-          <button disabled={!gameStart} onClick={() => setShowMovesHistory(true)}>Moves History</button>
+          <button disabled={!gameStart} onClick={() => setShowMovesHistory(true)}>Game History</button>
         </div>}
         {(w && w >= 900) && <div className='timerType'>
           <button disabled={gameStart} onClick={() => changeTimerType('3+2')}>Timer: 3+2</button>
@@ -885,14 +903,14 @@ function App() {
           <div className='tableIconContainer'>{field.figure && <Figure figure={field.figure.figure} player={field.figure.player} check={check && check === field.figure.player && field.figure.figure === 'king' ? true : false} />}</div>
         </div>)}</div>
         </Modal>}
-        <div className='tableContainer'>{table.map((field, i) => <div 
+        <div className={`tableContainer ${player === 'black' ? 'reversed' : ''}`}>{table.map((field, i) => <div 
           key={field.id} 
           className={`${field.className} ${getStylesForFieldsWhenNotSelected(selectedFigure, turn, field, player)}`} 
           onClick={() => selectFigure(field)}
           style={tableColor && {backgroundColor: `${field.className === 'white' ? tableColor.white : tableColor.black}`}}
         >
           <div className='tableFieldIdentifier'>{field.id}</div>
-          <div className='tableIconContainer'>{field.figure && <Figure figure={field.figure.figure} player={field.figure.player} check={check && check === field.figure.player && field.figure.figure === 'king' ? true : false} />}</div>
+          <div className='tableIconContainer'>{field.figure && <Figure PLAYER={player} figure={field.figure.figure} player={field.figure.player} check={check && check === field.figure.player && field.figure.figure === 'king' ? true : false} />}</div>
           <div className={`${getStylesForFieldsWhenSelected(selectedFigure, field, availableMoves)}`}></div>
         </div>)}</div>
       </div>

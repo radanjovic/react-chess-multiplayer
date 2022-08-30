@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,GAAG;EACrB,aAAa,EAAE,GAAG;CACrB",
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACd,QAAQ,EAAE,QAAQ;EAClB,gBAAgB,EAAE,GAAG;EACrB,aAAa,EAAE,GAAG;CACrB;;AAED,AAAA,SAAS,CAAC;EACN,SAAS,EAAE,cAAc;CAC5B",
     "sources": [
         "Figure.scss"
     ],

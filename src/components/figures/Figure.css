@@ -3,4 +3,9 @@
   background-color: red;
   border-radius: 50%;
 }
+
+.reversed {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 /*# sourceMappingURL=Figure.css.map */

@@ -20,62 +20,62 @@ import './Figure.css';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { useEffect, useState } from 'react';
 
-const Img = ({src, check}) => {
+const Img = ({src, check, player}) => {
     const {w} = useWindowDimensions();
     const [dimension, setDimension] = useState(80);
     useEffect(() => {
         if (w >= 1350) {
-            setDimension(80);
+            setDimension(100);
         } else if (w >= 1200 && w < 1350) {
-            setDimension(70);
+            setDimension(90);
         } else if (w >= 1050 && w < 1200) {
-            setDimension(60);
+            setDimension(80);
         } else if (w >= 900 && w < 1050) {
-            setDimension(45);
+            setDimension(70);
         } else if (w >= 700 && w < 900) {
-            setDimension(50);
+            setDimension(70);
         } else if (w >= 500 && w < 700) {
-            setDimension(40);
+            setDimension(60);
         } else if ( w < 500) {
-            setDimension(30);
+            setDimension(45);
         }
     }, [w]);
 
-    return <div className={`${check ? 'figureUnderCheck' : ''}`} ><img width={dimension} height={dimension} src={src} alt='chess figure' /></div>
+    return <div className={`${check ? 'figureUnderCheck' : ''} ${player === 'black' ? 'reversed' : ''}`} ><img width={dimension} height={dimension} src={src} alt='chess figure' /></div>
 }
 
 
-const Figure = ({figure, player, check}) => {
+const Figure = ({figure, player, check, PLAYER}) => {
     if (!figure || !player) {
         return <div></div>
     }
     if (player === 'white') {
         if (figure === 'pawn') {
-            return <Img src={whitePawn} />
+            return <Img src={whitePawn} player={PLAYER} />
         } else if (figure === 'rook') {
-            return <Img src={whiteRook} />
+            return <Img src={whiteRook} player={PLAYER} />
         } else if (figure === 'knight') {
-            return <Img src={whiteKnight} />
+            return <Img src={whiteKnight} player={PLAYER} />
         } else if (figure === 'bishop') {
-            return <Img src={whiteBishop} />
+            return <Img src={whiteBishop} player={PLAYER} />
         } else if (figure === 'queen') {
-            return <Img src={whiteQueen} />
+            return <Img src={whiteQueen} player={PLAYER} />
         } else if (figure === 'king') {
-            return <Img src={whiteKing} check={check} />
+            return <Img src={whiteKing} check={check} player={PLAYER} />
         }
     } else if (player === 'black') {
         if (figure === 'pawn') {
-            return <Img src={blackPawn} />
+            return <Img src={blackPawn} player={PLAYER} />
         } else if (figure === 'rook') {
-            return <Img src={blackRook} />
+            return <Img src={blackRook} player={PLAYER} />
         } else if (figure === 'knight') {
-            return <Img src={blackKnight} />
+            return <Img src={blackKnight} player={PLAYER} />
         } else if (figure === 'bishop') {
-            return <Img src={blackBishop} />
+            return <Img src={blackBishop} player={PLAYER} />
         } else if (figure === 'queen') {
-            return <Img src={blackQueen} />
+            return <Img src={blackQueen} player={PLAYER} />
         } else if (figure === 'king') {
-            return <Img src={blackKing} check={check} />
+            return <Img src={blackKing} check={check} player={PLAYER} />
         }
     }
 }
